@@ -14,6 +14,10 @@ app.use(bodyParser.json());
 const cars = mongoose.model('cars')
 const bookingstatus = mongoose.model('bookingstatus')
 
+app.get('/',(req,res)=>{
+    res.send('hello user');
+    };
+
 app.get('/cars',async (req, res) =>{
     try {
         const car = await cars.find({});
