@@ -7,6 +7,7 @@ require('./mongo');
 
 require('./model/cars')
 require('./model/bookingstatus')
+require('dotenv/config');
 
 app.use(bodyParser.json());
 
