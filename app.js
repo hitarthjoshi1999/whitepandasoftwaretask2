@@ -40,6 +40,8 @@ app.post('/cars',async (req, res) => {
         const car = new cars();
         car.car_num = req.body.car_num;
         car.carmodel = req.body.carmodel;
+        car.city = req.body.city;
+        car.capacity = req.body.capacity;
         car.rentperday = req.body.rentperday;
         car.availability = req.body.availability;
         await car.save();
