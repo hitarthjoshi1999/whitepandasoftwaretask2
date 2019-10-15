@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "ab580422-ce09-4dad-b1ba-c235bc8ddd2f",
+		"name": "whitepandatest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": \"4\",\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": \"4\",\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "show all cars"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"3abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": 4,\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "post to add cars"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/<insert _id to chanfe>",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": 4,\n        \"rentperday\": \"1000\",\n        \"availability\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						""
+					]
+				},
+				"description": "put operation to change data"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/<insert _id you want to delete>",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": \"4\",\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/<insert the _id you want to delete here>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"<insert the _id you want to delete here>"
+					]
+				},
+				"description": "delete or remove cars"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/bookingstatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": 4,\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/bookingstatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"bookingstatus"
+					]
+				},
+				"description": "show bookingstatus of all cars"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/bookingstatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"car_num\": \"123abc\",\n        \"customername\":\"hitarth\",\n        \"customernum\":99999999,\n        \"issuerdate\": \"2019/10/12\",\n        \"returndat\": \"2019/10/15\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/bookingstatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"bookingstatus"
+					]
+				},
+				"description": "put information about the car's booking status"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/cars/availabe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"car_num\": \"123abc\",\n        \"carmodel\": \"sedan\",\n        \"city\": \"ahmedabad\",\n        \"capacity\": \"4\",\n        \"rentperday\": \"1000\",\n        \"availability\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cars/available",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cars",
+						"available"
+					]
+				},
+				"description": "show available cars"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
